@@ -1,20 +1,49 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 
-function Greeting() {
+import './index.css'
+
+function Booklist() {
   return (
-    <div>
-      <Person/>
-      <Message/>
-    </div>
+    <section className='booklist'>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
   )
 }
 
-const Person = () => <h2>My name is Peter</h2>
-const Message = () => {
+const Book = () => {
   return (
-    <p>This is my message</p>
+    <article className='book'>
+      <Image/>
+      <Title/>
+      <Author/>  
+    </article>
   )
 }
 
-ReactDom.render(<Greeting />, document.getElementById('root'))
+const Image = () => {
+  return (
+    <img className="image" src="https://litexplore.files.wordpress.com/2014/05/a-tale-of-two-cities.jpg"/>
+  )
+}
+
+const Title = () => {
+  return ( 
+    <h3 className='booktitle'>A Tale of Two Cities</h3>
+  )
+}
+
+const Author = () => {
+  return (
+    <h3>Charles Dickens</h3>
+  )
+}
+
+
+
+ReactDom.render(<Booklist />, document.getElementById('root'))
