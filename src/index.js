@@ -3,7 +3,17 @@ import ReactDom from 'react-dom'
 
 function Greeting() {
   return (
-    <h4>This is Peter and this is my first component</h4> 
+    <div>
+      <Person/>
+      <Message/>
+    </div>
+  )
+}
+
+const Person = () => <h2>My name is Peter</h2>
+const Message = () => {
+  return (
+    <p>This is my message</p>
   )
 }
 
