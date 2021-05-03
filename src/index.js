@@ -12,17 +12,20 @@ const img = "https://litexplore.files.wordpress.com/2014/05/a-tale-of-two-cities
 function Booklist() {
   return (
     <section className='booklist'>
-      <Book />
+      <Book title="random title" number={22}/>
+      <Book title="another random title" number={44}/>
     </section>
   )
 }
 
-const Book = () => {
+const Book = (props) => {
+  console.log(props);
   return (
     <article className='book'>
-      <img className="image" src={img}/>
+      <img className="image" src={img} alt="book cover"/>
       <h3 className='booktitle'>{title}</h3>
       <h3>{author.toUpperCase()}</h3>
+      {/* {console.log(props)} */}
     </article>
   )
 }
